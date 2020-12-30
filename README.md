@@ -9,4 +9,6 @@ yarn create react-app photoshop
 ## 설명
 CSS의 filter를 이용해서 사진을 보정하는 기능
 
+<br>
+
 사진 출처: [unsplash.com](https://unsplash.com/)
