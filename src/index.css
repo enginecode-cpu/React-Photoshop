@@ -1,13 +1,74 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "image sidebar"
+    "slider sidebar";
+  width: 100vw;
+  height: 100vh;
+  background-color: #bababa;
+}
+
+.main-image {
+  grid-area: image;
+  background-image: url("./car.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: black;
+  border-left: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.sidebar-item {
+  cursor: pointer;
+  font-size: 1.125rem;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 1rem;
+  position: relative;
+  color: white;
+  transition: background-color 0.15s;
+}
+.sidebar-item:hover,
+.sidebar-item:focus {
+  background-color: #636e72;
+}
+.sidebar-item.active {
+  background-color: #747d8c;
+}
+.sidebar-item::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  bottom: 0;
+  height: 1px;
+  background-color: whitesmoke;
+}
+
+.slider-container {
+  grid-area: slider;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.slider {
+  width: 100%;
+  cursor: pointer;
 }
