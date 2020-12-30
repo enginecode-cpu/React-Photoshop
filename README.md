@@ -6,8 +6,8 @@ yarn create react-app photoshop
 
 <br>
 
-## 설명
-CSS의 filter를 이용해서 사진을 보정하는 기능
+## 2. 설명
+CSS의 filter를 이용해서 사진을 보정하는 프로젝트
 
 <br>
 
